@@ -12,7 +12,7 @@ export const InputSection: React.FC = () => {
           <div className="flex-1 text-lg text-[#242424]">
             I want to build a chatbot for healthcare professionals to track
             progress of patients in clinical trials. I am more familiar with
-            AWS.
+            AWS.CACA
           </div>
           <button className="flex items-center justify-center rounded p-1.5">
             <div
