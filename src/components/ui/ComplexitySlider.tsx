@@ -22,21 +22,21 @@ export const ComplexitySlider: React.FC = () => {
   return (
     <div className="w-full mb-2">
       <div className="relative w-full h-[78px] mb-2">
-        {/* Text labels - centered with the circles and with bottom margin */}
+        {/* Text labels - properly centered with each section */}
         <div 
-          className="absolute top-[15px] left-[146.87px] transform -translate-x-1/2 font-sans text-sm cursor-pointer mb-2" 
+          className="absolute top-[15px] left-[175px] transform -translate-x-1/2 font-sans text-sm cursor-pointer mb-2" 
           onClick={() => handleLevelClick("low")}
         >
           Low
         </div>
         <div 
-          className="absolute top-[15px] left-[524.87px] transform -translate-x-1/2 font-sans text-sm cursor-pointer mb-2" 
+          className="absolute top-[15px] left-[525px] transform -translate-x-1/2 font-sans text-sm cursor-pointer mb-2" 
           onClick={() => handleLevelClick("moderate")}
         >
           Moderate
         </div>
         <div 
-          className="absolute top-[15px] left-[880.87px] transform -translate-x-1/2 font-sans text-sm cursor-pointer mb-2" 
+          className="absolute top-[15px] left-[880px] transform -translate-x-1/2 font-sans text-sm cursor-pointer mb-2" 
           onClick={() => handleLevelClick("high")}
         >
           High
@@ -45,16 +45,26 @@ export const ComplexitySlider: React.FC = () => {
         {/* Slider bar */}
         <svg width="100%" height="78" viewBox="0 0 1057 78" fill="none" xmlns="http://www.w3.org/2000/svg" className="absolute">
           {/* Left line section */}
-          <path d="M3 35.5C1.61929 35.5 0.5 36.6193 0.5 38C0.5 39.3807 1.61929 40.5 3 40.5V35.5ZM3 38V40.5H347V38V35.5H3V38Z" fill="#707070" />
+          <path 
+            d="M3 35.5C1.61929 35.5 0.5 36.6193 0.5 38C0.5 39.3807 1.61929 40.5 3 40.5V35.5ZM3 38V40.5H347V38V35.5H3V38Z" 
+            fill={selectedLevel === "low" ? "#707070" : "white"} 
+          />
           
           {/* Middle line section */}
-          <path d="M352 38L700 38" stroke="white" strokeWidth="5" />
+          <path 
+            d="M352 38L700 38" 
+            stroke={selectedLevel === "moderate" ? "#707070" : "white"} 
+            strokeWidth="5" 
+          />
           
           {/* Right line section */}
-          <path d="M1054 40.5C1055.38 40.5 1056.5 39.3807 1056.5 38C1056.5 36.6193 1055.38 35.5 1054 35.5L1054 40.5ZM706 38L706 40.5L1054 40.5L1054 38L1054 35.5L706 35.5L706 38Z" fill="white" />
+          <path 
+            d="M1054 40.5C1055.38 40.5 1056.5 39.3807 1056.5 38C1056.5 36.6193 1055.38 35.5 1054 35.5L1054 40.5ZM706 38L706 40.5L1054 40.5L1054 38L1054 35.5L706 35.5L706 38Z" 
+            fill={selectedLevel === "high" ? "#707070" : "white"} 
+          />
           
           {/* Circles for each level */}
-          {/* Low circle - consistent with other levels */}
+          {/* Low circle */}
           <circle 
             cx="146.87" 
             cy="37.87" 
