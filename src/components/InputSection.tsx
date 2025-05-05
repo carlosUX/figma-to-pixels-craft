@@ -34,7 +34,7 @@ export const InputSection: React.FC = () => {
           </button>
         </div>
       </div>
-      <div className="flex flex-col w-full max-w-[1054px] mb-4 mt-2.5 max-md:max-w-full max-sm:max-w-full">
+      <div className="flex flex-col w-full max-w-[1054px] mb-4 mt-2.5 mt-4.5 max-md:max-w-full max-sm:max-w-full">
         <div className="font-semibold text-base text-[#242424] mb-1.5">
           Complexity
         </div>
