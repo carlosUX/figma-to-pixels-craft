@@ -12,7 +12,7 @@ const Index: React.FC = () => {
         <main className="flex flex-col items-center bg-[#F2BFA4] px-36 py-[26px] max-md:p-5 max-sm:p-[15px]">
           <InputSection />
           {/* RelatedInformation /> */}
-          <div className=" flex-col w-full flex flex-wrap justify-center gap-6 bg-[rgba(250,250,250,0.98)] px-[141px] py-[70px] max-md:p-5 max-sm:flex-col max-sm:items-center max-sm:p-[15px]">
+          <div className="">
             <PreferencesCard />
             <PastInteractionCard />
             <GoalsCard />
