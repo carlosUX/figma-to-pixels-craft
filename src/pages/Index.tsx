@@ -5,8 +5,10 @@ import { PreferencesCard } from "@/components/cards/PreferencesCard";
 import { PastInteractionCard } from "@/components/cards/PastInteractionCard";
 import { GoalsCard } from "@/components/cards/GoalsCard";
 import { RelatedInformation } from "@/components/RelatedInformation";
+
 const Index: React.FC = () => {
-  return <>
+  return (
+    <>
       <div className="max-w-none flex flex-col w-full bg-white mx-auto max-md:max-w-[991px] max-sm:max-w-screen-sm">
         <Header />
         <main className="flex flex-col items-center bg-[#F2BFA4] px-36 py-[26px] max-md:p-5 max-sm:p-[15px]">
@@ -16,9 +18,11 @@ const Index: React.FC = () => {
             <PreferencesCard />
             <PastInteractionCard />
             <GoalsCard />
-          </div>
+            </div>
         </main>
       </div>
-    </>;
+    </>
+  );
 };
+
 export default Index;
