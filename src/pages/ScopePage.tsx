@@ -30,7 +30,7 @@ const ScopePage: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col items-start w-full max-w-[1054px] mb-[30px] max-md:max-w-full max-sm:max-w-full">
+    <div className="w-full bg-[#F2BFA4] px-6 md:px-12 lg:px-36 py-8">
       <Header />
       <main className="flex flex-col items-center bg-[#F2F2F2] px-6 md:px-12 lg:px-36 py-6">
         <div className="flex flex-col w-full max-w-[1054px] items-center">
@@ -58,6 +58,7 @@ const ScopePage: React.FC = () => {
           </button>
         </div>
       </div>
+      
       <div className="flex flex-col w-full max-w-[1054px] mb-8 mt-2.5 max-md:max-w-full max-sm:max-w-full">
         <div className="font-semibold text-base text-[#242424] mb-1.5">
           Complexity
