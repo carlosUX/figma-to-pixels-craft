@@ -18,7 +18,10 @@ export const PastInteractionCard: React.FC = () => {
       <div className="flex items-center px-2.5 py-[11px] border-b-[#E0E0E0] border-b border-solid">
         <div
           dangerouslySetInnerHTML={{
-            __html: `<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14 9C14 8.44772 14.4477 8 15 8C15.5523 8 16 8.44772 16 9V16H20C20.5523 16 21 16.4477 21 17C21 17.5523 20.5523 18 20 18H15C14.4477 18 14 17.5523 14 17V9Z" fill="#242424"/></svg>`,
+            __html: `<svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 7C12 6.44772 12.4477 6 13 6C13.5523 6 14 6.44772 14 7V14H18C18.5523 14 19 14.4477 19 15C19 15.5523 18.5523 16 18 16H13C12.4477 16 12 15.5523 12 15V7ZM14 28C21.732 28 28 21.732 28 14C28 6.26801 21.732 0 14 0C6.26801 0 0 6.26801 0 14C0 21.732 6.26801 28 14 28ZM14 26C7.37258 26 2 20.6274 2 14C2 7.37258 7.37258 2 14 2C20.6274 2 26 7.37258 26 14C26 20.6274 20.6274 26 14 26Z" fill="#242424"/>
+</svg>
+`,
           }}
           className="mr-2.5"
         />
