@@ -36,7 +36,7 @@ const ScopePage: React.FC = () => {
         <div className="flex flex-col w-full max-w-[1054px] items-center">
           {/* User prompt display */}
           <div className="flex flex-col items-start w-full max-w-[1054px] mb-[30px] max-md:max-w-full max-sm:max-w-full">
-      <div className="font-semibold text-xl text-[#242424] mb-[17px]">
+          <div className="font-semibold text-xl text-[#242424] mb-[17px]">
         What would you like to build?
       </div>
       <div className="flex w-full bg-white p-3 rounded-[20px] max-sm:p-2.5">
