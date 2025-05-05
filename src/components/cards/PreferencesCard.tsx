@@ -61,7 +61,9 @@ export const PreferencesCard: React.FC = () => {
           <div className="font-semibold text-base text-[#242424] mb-1">
             Learning pace:
           </div>
+          <div className="flex flex-wrap gap-[11px]">
           <Tag>Self-paced</Tag>
+          </div>
         </div>
       </div>
     </div>
