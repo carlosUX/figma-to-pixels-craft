@@ -24,7 +24,7 @@ export const ComplexitySlider: React.FC = () => {
       <div className="relative w-full h-[78px] mb-0">
         {/* Text labels - properly centered with each section */}
         <div 
-          className="absolute top-[25px] left-[175px] transform -translate-x-1/2 font-sans text-sm cursor-pointer mb-2" 
+          className="absolute top-[10px] left-[175px] transform -translate-x-1/2 font-sans text-sm cursor-pointer mb-2" 
           onClick={() => handleLevelClick("low")}
         >
           Low
