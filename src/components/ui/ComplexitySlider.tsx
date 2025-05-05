@@ -20,7 +20,7 @@ export const ComplexitySlider: React.FC = () => {
   };
 
   return (
-    <div className="w-full mb-0">
+    <div className="w-full mb-[0px]">
       <div className="relative w-full h-[78px] mb-0">
         {/* Text labels - properly centered with each section */}
         <div 
