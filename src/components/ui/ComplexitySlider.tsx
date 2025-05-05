@@ -20,16 +20,25 @@ export const ComplexitySlider: React.FC = () => {
   };
 
   return (
-    <div className="w-full">
-      <div className="relative w-full h-[78px]">
-        {/* Text labels */}
-        <div className="absolute top-[15px] left-[138px] font-sans text-sm cursor-pointer" onClick={() => handleLevelClick("low")}>
+    <div className="w-full mb-2">
+      <div className="relative w-full h-[78px] mb-2">
+        {/* Text labels - centered with the circles and with bottom margin */}
+        <div 
+          className="absolute top-[15px] left-[146.87px] transform -translate-x-1/2 font-sans text-sm cursor-pointer mb-2" 
+          onClick={() => handleLevelClick("low")}
+        >
           Low
         </div>
-        <div className="absolute top-[15px] left-[475px] font-sans text-sm cursor-pointer" onClick={() => handleLevelClick("moderate")}>
+        <div 
+          className="absolute top-[15px] left-[524.87px] transform -translate-x-1/2 font-sans text-sm cursor-pointer mb-2" 
+          onClick={() => handleLevelClick("moderate")}
+        >
           Moderate
         </div>
-        <div className="absolute top-[15px] left-[880px] font-sans text-sm cursor-pointer" onClick={() => handleLevelClick("high")}>
+        <div 
+          className="absolute top-[15px] left-[880.87px] transform -translate-x-1/2 font-sans text-sm cursor-pointer mb-2" 
+          onClick={() => handleLevelClick("high")}
+        >
           High
         </div>
 
@@ -45,7 +54,7 @@ export const ComplexitySlider: React.FC = () => {
           <path d="M1054 40.5C1055.38 40.5 1056.5 39.3807 1056.5 38C1056.5 36.6193 1055.38 35.5 1054 35.5L1054 40.5ZM706 38L706 40.5L1054 40.5L1054 38L1054 35.5L706 35.5L706 38Z" fill="white" />
           
           {/* Circles for each level */}
-          {/* Low circle - always visible, filled when selected */}
+          {/* Low circle - consistent with other levels */}
           <circle 
             cx="146.87" 
             cy="37.87" 
@@ -135,8 +144,8 @@ export const ComplexitySlider: React.FC = () => {
         </div>
       </div>
 
-      {/* Description text */}
-      <div className="text-sm text-[#201F1F] mt-2">
+      {/* Description text - reduced margin between slider and description */}
+      <div className="text-sm text-[#201F1F] mt-[-4px]">
         {getLevelDescription()}
       </div>
     </div>
