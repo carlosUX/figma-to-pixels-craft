@@ -69,7 +69,6 @@ const ScopePage: React.FC = () => {
         <ComplexitySlider />
       </div>
     </div>
-    </div>
           
           {/* Recommended phases */}
           <div className="w-full max-w-[1054px] mb-8">
