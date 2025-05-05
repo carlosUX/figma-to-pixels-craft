@@ -8,7 +8,7 @@ import { RelatedInformation } from "@/components/RelatedInformation";
 const Index: React.FC = () => {
   return <>
       <div className="max-w-none flex flex-col w-full bg-white mx-auto max-md:max-w-[991px] max-sm:max-w-screen-sm">
-        <Header />
+      <Header />
         <main className="flex flex-col items-center bg-[#F2BFA4] px-36 py-[26px] max-md:p-5 max-sm:p-[15px]">
           <InputSection />
           {/* RelatedInformation /> */}
