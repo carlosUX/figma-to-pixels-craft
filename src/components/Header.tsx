@@ -10,7 +10,10 @@ export const Header: React.FC = () => {
           alt="Innovatech Solutions Logo"
         />
         <span className="font-bold text-2xl text-[#65696F] ml-[9px] max-sm:text-xl">
-          Innovatech Solutions
+        <link
+        href="home"
+        rel="stylesheet"
+      />Innovatech Solutions
         </span>
       </div>
     </header>
