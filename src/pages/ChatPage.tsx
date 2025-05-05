@@ -27,7 +27,7 @@ const ChatPrompt: React.FC<{
     </div>;
 };
 const ProgressIndicator: React.FC = () => {
-  return <Link to="scopepage"><div className="w-full max-w-[900px] flex items-center border border-[#9370DB] rounded-lg p-6 mb-6 bg-slate-50">
+  return <Link to="scopepage.tsx"><div className="w-full max-w-[900px] flex items-center border border-[#9370DB] rounded-lg p-6 mb-6 bg-slate-50">
       <div className="w-8 h-8 mr-4">
         <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M16 4L19.2411 12.7589L28 16L19.2411 19.2411L16 28L12.7589 19.2411L4 16L12.7589 12.7589L16 4Z" fill="#9370DB" />
