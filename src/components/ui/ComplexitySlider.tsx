@@ -7,7 +7,7 @@ export const ComplexitySlider: React.FC = () => {
   const getLevelDescription = () => {
     switch (selectedLevel) {
       case "low":
-        return "Provides brief and straightforward responses, ideal for quick answers or basic information.";
+        return "Provides brief CACA and straightforward responses, ideal for quick answers or basic information.";
       case "moderate":
         return "Includes a wide range of features and customization options for experienced users.";
       case "high":
