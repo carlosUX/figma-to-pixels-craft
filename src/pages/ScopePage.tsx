@@ -30,7 +30,7 @@ const ScopePage: React.FC = () => {
   };
 
   return (
-    <div className="w-full bg-[#F2BFA4] px-6 md:px-12 lg:px-36 py-8">
+    <div className="max-w-none flex flex-col w-full bg-white mx-auto max-md:max-w-[991px] max-sm:max-w-screen-sm">
       <Header />
       <div className="flex flex-col items-start w-full max-w-[1054px] mb-[30px] max-md:max-w-full max-sm:max-w-full">
           <div className="font-semibold text-xl text-[#242424] mb-[17px]">
