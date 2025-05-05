@@ -155,7 +155,7 @@ export const ComplexitySlider: React.FC = () => {
       </div>
 
       {/* Description text - reduced margin between slider and description */}
-      <div className="text-sm text-[#201F1F] mt-2px]">
+      <div className="text-sm text-[#201F1F] mt-0px]">
         {getLevelDescription()}
       </div>
     </div>
