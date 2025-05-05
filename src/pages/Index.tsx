@@ -10,10 +10,6 @@ import { RelatedInformation } from "@/components/RelatedInformation";
 const Index: React.FC = () => {
   return (
     <>
-      <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Segoe+UI:wght@400;600&display=swap"
-        rel="stylesheet"
-      />
       <div className="max-w-none flex flex-col w-full bg-white mx-auto max-md:max-w-[991px] max-sm:max-w-screen-sm">
         <Header />
         <main className="flex flex-col items-center bg-[#F2BFA4] px-36 py-[26px] max-md:p-5 max-sm:p-[15px]">
