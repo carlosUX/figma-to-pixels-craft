@@ -7,7 +7,7 @@ export const ComplexitySlider: React.FC = () => {
   const getLevelDescription = () => {
     switch (selectedLevel) {
       case "low":
-        return "Provides brief CACA and straightforward responses, ideal for quick answers or basic information.";
+        return "Provides brief and straightforward responses, ideal for quick answers or basic information.";
       case "moderate":
         return "Includes a wide range of features and customization options for experienced users.";
       case "high":
@@ -21,22 +21,22 @@ export const ComplexitySlider: React.FC = () => {
 
   return (
     <div className="w-full mb-2">
-      <div className="relative w-full h-[78px] mb-2">
+      <div className="relative w-full h-[78px] mb-4">
         {/* Text labels - properly centered with each section */}
         <div 
-          className="absolute top-[15px] left-[175px] transform -translate-x-1/2 font-sans text-sm cursor-pointer mb-4" 
+          className="absolute top-[15px] left-[175px] transform -translate-x-1/2 font-sans text-sm cursor-pointer mb-2" 
           onClick={() => handleLevelClick("low")}
         >
           Low
         </div>
         <div 
-          className="absolute top-[15px] left-[525px] transform -translate-x-1/2 font-sans text-sm cursor-pointer mb-4" 
+          className="absolute top-[15px] left-[525px] transform -translate-x-1/2 font-sans text-sm cursor-pointer mb-2" 
           onClick={() => handleLevelClick("moderate")}
         >
           Moderate
         </div>
         <div 
-          className="absolute top-[15px] left-[880px] transform -translate-x-1/2 font-sans text-sm cursor-pointer mb-4" 
+          className="absolute top-[15px] left-[880px] transform -translate-x-1/2 font-sans text-sm cursor-pointer mb-2" 
           onClick={() => handleLevelClick("high")}
         >
           High
