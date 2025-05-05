@@ -35,8 +35,6 @@ const ScopePage: React.FC = () => {
       <main className="flex flex-col items-center bg-[#F2F2F2] px-6 md:px-12 lg:px-36 py-6">
         <div className="flex flex-col w-full max-w-[1054px] items-center">
           {/* User prompt display */}
-          
-          
           {/* Recommended phases */}
           <div className="w-full max-w-[1054px] mb-8">
             <div className="mb-2 text-gray-700 font-semibold">Recommended phases:</div>
