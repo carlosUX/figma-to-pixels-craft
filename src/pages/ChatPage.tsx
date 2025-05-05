@@ -21,7 +21,7 @@ const ChatPrompt: React.FC<{
   question
 }) => {
   return <div className="w-full max-w-[900px] border border-gray-200 rounded-lg mb-6">
-      <div className="p-4 bg-gray-50">
+      <div className="p-4 bg-gray-50 rounded">
         <p className="text-[#242424] text-base">{question}</p>
       </div>
     </div>;
