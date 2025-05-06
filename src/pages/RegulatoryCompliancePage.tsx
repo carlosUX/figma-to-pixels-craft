@@ -1,25 +1,20 @@
-
 import React from "react";
 import { Header } from "@/components/Header";
 import { PhaseNavigation } from "@/components/navigation/PhaseNavigation";
 import { InputWithButton } from "@/components/ui/InputWithButton";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
-
 const RegulatoryCompliancePage: React.FC = () => {
   const navigate = useNavigate();
-
   const handleBack = () => navigate("/scope-definition");
   const handleNext = () => navigate("/conversational-flows");
-
-  return (
-    <div className="max-w-none flex flex-col w-full bg-white min-h-screen">
+  return <div className="max-w-none flex flex-col w-full bg-white min-h-screen">
       <Header />
       
       {/* Moved "What would you like to build?" section here */}
-      <div className="w-full bg-[#F2BFA4] px-6 md:px-12 lg:px-36 py-4">
+      <div className="w-full px-6 md:px-12 lg:px-36 py-4 bg-zinc-400">
         <div className="flex flex-col w-full max-w-[1054px] mx-auto">
-          <h3 className="font-semibold text-lg text-gray-700 mb-4">What would you like to build?</h3>
+          <h3 className="font-semibold text-lg mb-4 text-zinc-50">What would you like to build?</h3>
           
           <InputWithButton placeholder="Message Ivatech" />
           
@@ -27,15 +22,15 @@ const RegulatoryCompliancePage: React.FC = () => {
             <span className="text-sm text-gray-700 mr-2">Complexity</span>
             <span className="text-sm font-semibold text-gray-700">Moderate</span>
             <svg className="ml-2" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M5.83333 5H14.1667C14.6269 5 15 5.37308 15 5.83333V14.1667C15 14.6269 14.6269 15 14.1667 15H5.83333C5.37308 15 5 14.6269 5 14.1667V5.83333C5 5.37308 5.37308 5 5.83333 5Z" stroke="#335CCC" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-              <path d="M5 5L15 15" stroke="#335CCC" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-              <path d="M15 5L5 15" stroke="#335CCC" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+              <path d="M5.83333 5H14.1667C14.6269 5 15 5.37308 15 5.83333V14.1667C15 14.6269 14.6269 15 14.1667 15H5.83333C5.37308 15 5 14.6269 5 14.1667V5.83333C5 5.37308 5.37308 5 5.83333 5Z" stroke="#335CCC" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+              <path d="M5 5L15 15" stroke="#335CCC" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+              <path d="M15 5L5 15" stroke="#335CCC" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
           </div>
         </div>
       </div>
       
-      <main className="flex flex-col items-center bg-[#F2F2F2] px-6 md:px-12 lg:px-36 py-6">
+      <main className="flex flex-col items-center px-6 md:px-12 lg:px-36 py-6 bg-zinc-200">
         <div className="flex flex-col w-full max-w-[1054px]">
           {/* User prompt display */}
           <div className="text-center my-6 italic text-gray-700">
@@ -85,19 +80,11 @@ const RegulatoryCompliancePage: React.FC = () => {
           
           {/* Navigation buttons */}
           <div className="flex gap-4 mb-12">
-            <Button 
-              onClick={handleBack} 
-              variant="secondary" 
-              className="bg-blue-600 hover:bg-blue-700 text-white px-6"
-            >
+            <Button onClick={handleBack} variant="secondary" className="bg-blue-600 hover:bg-blue-700 text-white px-6">
               <span className="mr-1">←</span> Back
             </Button>
             
-            <Button 
-              onClick={handleNext} 
-              variant="secondary" 
-              className="bg-blue-600 hover:bg-blue-700 text-white px-6"
-            >
+            <Button onClick={handleNext} variant="secondary" className="bg-blue-600 hover:bg-blue-700 text-white px-6">
               Next <span className="ml-1">→</span>
             </Button>
           </div>
@@ -105,8 +92,6 @@ const RegulatoryCompliancePage: React.FC = () => {
       </main>
       
       {/* Footer section removed from here */}
-    </div>
-  );
+    </div>;
 };
-
 export default RegulatoryCompliancePage;
