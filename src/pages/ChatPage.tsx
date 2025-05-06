@@ -1,6 +1,9 @@
+
 import React from "react";
 import { Header } from "@/components/Header";
 import { useNavigate } from "react-router-dom";
+import { ProgressIndicator } from "@/components/ProgressIndicator";
+
 interface MessageProps {
   isUser: boolean;
   content: string;
