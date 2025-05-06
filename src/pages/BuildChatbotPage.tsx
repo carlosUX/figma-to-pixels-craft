@@ -6,10 +6,10 @@ import { InputWithButton } from "@/components/ui/InputWithButton";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
 
-const TechnologyStackPage: React.FC = () => {
+const BuildChatbotPage: React.FC = () => {
   const navigate = useNavigate();
-  const handleBack = () => navigate("/conversational-flows");
-  const handleNext = () => navigate("/build-chatbot");
+  const handleBack = () => navigate("/technology-stack");
+  const handleNext = () => navigate("/deploy-chatbot");
 
   return (
     <div className="max-w-none flex flex-col w-full bg-white min-h-screen">
@@ -48,28 +48,35 @@ const TechnologyStackPage: React.FC = () => {
           
           {/* Main content */}
           <div className="w-full max-w-[1054px] mb-12">
-            <p className="text-gray-800 mb-6">
-              Select the appropriate AWS services for natural language processing, data storage, and serverless computing.
-            </p>
-            
-            <p className="text-gray-800 mb-8">
-              AWS offers a range of services such as Amazon Lex for building conversational interfaces, Amazon S3 for secure data storage, and AWS Lambda for serverless computing. Choosing the right combination of these services will ensure that the chatbot is scalable, reliable, and efficient.
-            </p>
-            
-            <div className="flex flex-wrap justify-center gap-8 my-10">
-              <div className="border border-gray-200 bg-white rounded-lg p-6 flex flex-col items-center">
-                <img src="/lovable-uploads/b96c0288-80d9-431c-af55-c7618d487147.png" alt="Amazon Lex Logo" className="w-24 h-24 object-contain" />
-                <h3 className="mt-4 font-semibold text-center">Amazon Lex</h3>
-              </div>
+            <div className="space-y-6">
+              <p className="text-gray-800">
+                Develop the chatbot using the chosen technology stack and designed conversational flows. This involves coding the chatbot's backend, integrating it with the selected AWS services, and setting up the necessary infrastructure.
+              </p>
               
-              <div className="border border-gray-200 bg-white rounded-lg p-6 flex flex-col items-center">
-                <img src="/lovable-uploads/f0c27208-2951-4976-8c27-523784e08310.png" alt="Amazon S3 Logo" className="w-24 h-24 object-contain" />
-                <h3 className="mt-4 font-semibold text-center">Amazon S3</h3>
-              </div>
-              
-              <div className="border border-gray-200 bg-white rounded-lg p-6 flex flex-col items-center">
-                <img src="/lovable-uploads/ca498189-5de4-4d19-ba7a-33684da6ff34.png" alt="AWS Lambda Logo" className="w-24 h-24 object-contain" />
-                <h3 className="mt-4 font-semibold text-center">AWS Lambda</h3>
+              <p className="text-gray-800">
+                Ensure that the chatbot can handle various user inputs and provide accurate responses. Regular testing and debugging are crucial to identify and fix any issues during the development process.
+              </p>
+            </div>
+
+            <div className="my-12 bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+              <h3 className="font-semibold text-lg text-blue-800 mb-4">Development Steps</h3>
+              <ul className="list-disc pl-6 space-y-3 text-gray-700">
+                <li>Set up AWS Lambda functions for serverless backend processing</li>
+                <li>Configure Amazon Lex for natural language understanding</li>
+                <li>Implement DynamoDB for storing conversation history and patient data</li>
+                <li>Create secure API endpoints for healthcare professional interactions</li>
+                <li>Develop authentication system using Amazon Cognito</li>
+                <li>Implement data encryption for HIPAA compliance</li>
+              </ul>
+            </div>
+
+            <div className="my-12">
+              <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-6">
+                <h3 className="font-semibold text-lg mb-3">Do you want me to open the Code Editor to start building?</h3>
+                <p className="text-gray-700 mb-4">You can start writing the Lambda functions and implementing the chatbot logic.</p>
+                <button className="bg-blue-100 text-blue-800 hover:bg-blue-200 px-6 py-2 rounded-lg float-right">
+                  Yes, please
+                </button>
               </div>
             </div>
           </div>
@@ -90,4 +97,4 @@ const TechnologyStackPage: React.FC = () => {
   );
 };
 
-export default TechnologyStackPage;
+export default BuildChatbotPage;

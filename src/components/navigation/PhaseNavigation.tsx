@@ -1,3 +1,4 @@
+
 import React from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { ChevronRight } from "lucide-react";
@@ -13,6 +14,8 @@ const phases: Phase[] = [
   { name: "compliance", path: "/regulatory-compliance", label: "Regulatory Compliance" },
   { name: "flows", path: "/conversational-flows", label: "Design Conversational Flows" },
   { name: "technology", path: "/technology-stack", label: "Choose Technology Stack" },
+  { name: "build", path: "/build-chatbot", label: "Build the Chatbot" },
+  { name: "deploy", path: "/deploy-chatbot", label: "Deploy the Chatbot" },
 ];
 
 export const PhaseNavigation: React.FC = () => {
