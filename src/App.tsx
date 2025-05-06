@@ -15,6 +15,7 @@ import TechnologyStackPage from "./pages/TechnologyStackPage";
 import BuildChatbotPage from "./pages/BuildChatbotPage";
 import DeployChatbotPage from "./pages/DeployChatbotPage";
 import NotFound from "./pages/NotFound";
+import "./App.css";
 
 const queryClient = new QueryClient();
 

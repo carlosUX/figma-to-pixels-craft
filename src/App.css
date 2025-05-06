@@ -1,7 +1,7 @@
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
   text-align: center;
 }
 
@@ -11,9 +11,11 @@
   will-change: filter;
   transition: filter 300ms;
 }
+
 .logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+  filter: drop-shadow(0 0 2em #335cccaa);
 }
+
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
@@ -39,4 +41,41 @@
 
 .read-the-docs {
   color: #888;
+}
+
+/* Add transition effects */
+.transition-all {
+  transition: all 0.3s ease;
+}
+
+body {
+  background-color: #f5f8fd;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #242424;
+}
+
+.text-primary-gradient {
+  background: linear-gradient(90deg, #335CCC 0%, #4A74E8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+button.primary-button {
+  background: linear-gradient(90deg, #335CCC 0%, #497CE2 100%);
+  color: white;
+  transition: all 0.3s ease;
+}
+
+button.primary-button:hover {
+  box-shadow: 0 4px 8px rgba(51, 92, 204, 0.25);
+  transform: translateY(-1px);
+}
+
+.input-field {
+  background: linear-gradient(180deg, #FFFFFF 0%, #F5F8FD 100%);
+  border: 1px solid #E0EBF7;
+  border-radius: 0.5rem;
 }

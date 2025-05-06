@@ -36,24 +36,22 @@ export const PhaseNavigation: React.FC = () => {
       <div className="flex flex-wrap gap-2 md:gap-4 w-full">
         {phases.map((phase, index) => {
           const isActive = phase.path === currentPath;
-          const underlineClass = isActive ? "border-b-2 border-b-green-500" : "";
-          const bgClass = isActive ? "border-[#E8D1C5] bg-white" : "border-gray-200 bg-white";
-          const textClass = isActive ? "text-[#335CCC] font-semibold" : "text-gray-700";
+          const itemClass = isActive ? "phase-item-active" : "phase-item-inactive";
           
           return (
             <div
               key={phase.name}
-              className={`border ${bgClass} rounded-lg p-3 md:p-4 min-w-[160px] text-center cursor-pointer shadow-sm ${underlineClass}`}
+              className={`border ${itemClass} rounded-lg p-3 md:p-4 min-w-[160px] text-center cursor-pointer shadow-custom transition-all hover:shadow-md`}
               onClick={() => handlePhaseClick(phase.path)}
             >
-              <span className={`${textClass}`}>{phase.label}</span>
+              <span>{phase.label}</span>
             </div>
           );
         })}
         
         <div className="flex items-center justify-center">
-          <div className="h-8 w-8 flex items-center justify-center rounded-full bg-white border border-gray-200">
-            <ChevronRight size={16} className="text-[#335CCC]" />
+          <div className="h-8 w-8 flex items-center justify-center rounded-full bg-white border border-gray-200 shadow-sm">
+            <ChevronRight size={16} className="text-primary-blue" />
           </div>
         </div>
       </div>

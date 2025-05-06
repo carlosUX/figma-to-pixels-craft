@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,7 +62,16 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				// Custom colors added
+				'primary-blue': '#335CCC',
+				'secondary-blue': '#4A74E8',
+				'light-blue': '#E8F3FF',
+				'lighter-blue': '#F0F9FF',
+				'accent-peach': '#E8D1C5',
+				'bg-light': '#F9FAFC',
+				'bg-lighter': '#F5F8FD',
+				'input-bg': '#F5F8FD',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -84,11 +94,32 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'fade-in': {
+					from: {
+						opacity: '0',
+						transform: 'translateY(10px)'
+					},
+					to: {
+						opacity: '1',
+						transform: 'translateY(0)'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'fade-in': 'fade-in 0.3s ease-out'
+			},
+			boxShadow: {
+				'custom': '0 4px 6px rgba(51, 92, 204, 0.1)',
+				'custom-hover': '0 8px 15px rgba(51, 92, 204, 0.15)',
+			},
+			backgroundImage: {
+				'gradient-header': 'linear-gradient(90deg, #335CCC 0%, #4A74E8 100%)',
+				'gradient-card': 'linear-gradient(180deg, #F9FAFC 0%, #EDF2FA 100%)',
+				'gradient-button': 'linear-gradient(90deg, #335CCC 0%, #497CE2 100%)',
+				'gradient-input': 'linear-gradient(180deg, #FFFFFF 0%, #F5F8FD 100%)',
 			}
 		}
 	},
