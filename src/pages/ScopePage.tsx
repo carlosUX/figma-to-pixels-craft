@@ -41,14 +41,16 @@ const ScopePage: React.FC = () => {
               <div className="border border-[#E8D1C5] bg-white rounded-lg p-4 min-w-[200px] text-center shadow-sm">
                 <span className="text-[#335CCC] font-semibold">Define the scope</span>
               </div>
-              <Link to="scope-definition">
+              <Link to="/ScopeDefinitionPage">
               <div className="border border-gray-200 bg-white rounded-lg p-4 min-w-[200px] text-center">
                 <span className="text-gray-700">Regulatory Compliance</span>
               </div>
               </Link>
+              <Link to="/ConversationalFlowsPage">
               <div className="border border-gray-200 bg-white rounded-lg p-4 min-w-[200px] text-center">
                 <span className="text-gray-700">Design Conversational Flows</span>
               </div>
+              </Link>
               <div className="border border-gray-200 bg-white rounded-lg p-4 min-w-[200px] text-center">
                 <span className="text-gray-700">Choose Technology Stack</span>
               </div>
