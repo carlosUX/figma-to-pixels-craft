@@ -1,5 +1,5 @@
 
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Header } from "@/components/Header";
 import { useNavigate } from "react-router-dom";
 import { ProgressIndicator } from "@/components/ProgressIndicator";
@@ -12,22 +12,27 @@ const Message: React.FC<MessageProps> = ({
   isUser,
   content
 }) => {
-  return <div className={`w-full max-w-[900px] mb-6 ${isUser ? 'self-end' : 'self-start'}`}>
+  return (
+    <div className={`w-full max-w-[900px] mb-6 ${isUser ? 'self-end' : 'self-start'} animate-fade-in`}>
       <div className={`p-4 rounded-lg ${isUser ? 'bg-[#E8F3FF]' : 'bg-[#F0F9FF]'}`}>
         <p className="text-[#242424] text-base">{content}</p>
       </div>
-    </div>;
+    </div>
+  );
 };
+
 const ChatPrompt: React.FC<{
   question: string;
 }> = ({
   question
 }) => {
-  return <div className="w-full max-w-[900px] border border-gray-200 rounded-lg mb-6">
+  return (
+    <div className="w-full max-w-[900px] border border-gray-200 rounded-lg mb-6 animate-fade-in">
       <div className="p-4 bg-slate-50">
         <p className="text-[#242424] text-base">{question}</p>
       </div>
-    </div>;
+    </div>
+  );
 };
 
 const ChatPage: React.FC = () => {
@@ -35,7 +40,34 @@ const ChatPage: React.FC = () => {
   const handleSendMessage = () => {
     navigate('/scope-definition');
   };
-  return <div className="max-w-none flex flex-col w-full bg-white min-h-screen">
+
+  // Create an array of chat elements with their types
+  const chatElements = [
+    { type: 'message', isUser: true, content: "I want to build a chatbot for healthcare professionals to track progress of patients in clinical trials. I am more familiar with AWS." },
+    { type: 'prompt', content: "What specific functionalities do you need the chatbot to have?" },
+    { type: 'message', isUser: true, content: "The chatbot should support tasks such as symptom-checking, automated patient intake, remote monitoring of chronic conditions, and medication reminders" },
+    { type: 'prompt', content: "Are there any data security and compliance requirements?" },
+    { type: 'message', isUser: true, content: "Yes, the chatbot must comply with HIPAA regulations to ensure the security and privacy of patient data" },
+    { type: 'message', isUser: true, content: "Yes, the chatbot must comply with HIPAA regulations to ensure the security and privacy of patient data" },
+    { type: 'progress' }
+  ];
+
+  // State to track which elements are visible
+  const [visibleCount, setVisibleCount] = useState(0);
+
+  // Effect to show elements one at a time with a delay
+  useEffect(() => {
+    if (visibleCount < chatElements.length) {
+      const timer = setTimeout(() => {
+        setVisibleCount(prev => prev + 1);
+      }, 2000);
+      
+      return () => clearTimeout(timer);
+    }
+  }, [visibleCount, chatElements.length]);
+
+  return (
+    <div className="max-w-none flex flex-col w-full bg-white min-h-screen">
       <Header />
       <main className="flex flex-col items-center bg-[#F2BFA4] px-6 md:px-12 lg:px-36 py-6">
         <div className="flex flex-col w-full max-w-[1054px]">
@@ -55,22 +87,32 @@ const ChatPage: React.FC = () => {
           </div>
           
           <div className="w-full flex flex-col items-center space-y-6 py-8">
-            <Message isUser={true} content="I want to build a chatbot for healthcare professionals to track progress of patients in clinical trials. I am more familiar with AWS." />
-            
-            <ChatPrompt question="What specific functionalities do you need the chatbot to have?" />
-            
-            <Message isUser={true} content="The chatbot should support tasks such as symptom-checking, automated patient intake, remote monitoring of chronic conditions, and medication reminders" />
-            
-            <ChatPrompt question="Are there any data security and compliance requirements?" />
-            
-            <Message isUser={true} content="Yes, the chatbot must comply with HIPAA regulations to ensure the security and privacy of patient data" />
-            
-            <Message isUser={true} content="Yes, the chatbot must comply with HIPAA regulations to ensure the security and privacy of patient data" />
-            
-            <ProgressIndicator />
+            {chatElements.slice(0, visibleCount).map((element, index) => {
+              if (element.type === 'message') {
+                return (
+                  <Message 
+                    key={index} 
+                    isUser={element.isUser} 
+                    content={element.content} 
+                  />
+                );
+              } else if (element.type === 'prompt') {
+                return (
+                  <ChatPrompt 
+                    key={index} 
+                    question={element.content} 
+                  />
+                );
+              } else if (element.type === 'progress') {
+                return <ProgressIndicator key={index} />;
+              }
+              return null;
+            })}
           </div>
         </div>
       </main>
-    </div>;
+    </div>
+  );
 };
+
 export default ChatPage;
