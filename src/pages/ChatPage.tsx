@@ -74,7 +74,7 @@ const ChatPage: React.FC = () => {
   }, [visibleCount, chatElements.length]);
   return <div className="max-w-none flex flex-col w-full bg-white min-h-screen">
       <Header />
-      <main className="flex flex-col items-center px-6 md:px-12 lg:px-36 py-6 bg-zinc-200">
+      <main className="flex flex-col items-center px-6 md:px-12 lg:px-36 py-6 bg-zinc-200 rounded-none">
         <div className="flex flex-col w-full max-w-[1054px]">
           <div className="font-semibold text-xl text-[#242424] mb-4">
             What would you like to build?
