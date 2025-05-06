@@ -20,23 +20,23 @@ export const ComplexitySlider: React.FC = () => {
   };
 
   return (
-    <div className="w-full mb-[0px]">
-      <div className="relative w-full h-[78px] mb-0">
+    <div className="w-full mb-2">
+      <div className="relative w-full h-[78px] mb-2">
         {/* Text labels - properly centered with each section */}
         <div 
-          className="absolute top-[5px] left-[175px] transform -translate-x-1/2 font-sans text-sm cursor-pointer" 
+          className="absolute top-[15px] left-[175px] transform -translate-x-1/2 font-sans text-sm cursor-pointer mb-2" 
           onClick={() => handleLevelClick("low")}
         >
           Low
         </div>
         <div 
-          className="absolute top-[5px] left-[525px] transform -translate-x-1/2 font-sans text-sm cursor-pointer" 
+          className="absolute top-[15px] left-[525px] transform -translate-x-1/2 font-sans text-sm cursor-pointer mb-2" 
           onClick={() => handleLevelClick("moderate")}
         >
           Moderate
         </div>
         <div 
-          className="absolute top-[5px] left-[880px] transform -translate-x-1/2 font-sans text-sm cursor-pointer" 
+          className="absolute top-[15px] left-[880px] transform -translate-x-1/2 font-sans text-sm cursor-pointer mb-2" 
           onClick={() => handleLevelClick("high")}
         >
           High
@@ -155,7 +155,7 @@ export const ComplexitySlider: React.FC = () => {
       </div>
 
       {/* Description text - reduced margin between slider and description */}
-      <div className="text-sm text-[#201F1F] mb-[0px] mt-[0px]">
+      <div className="text-sm text-[#201F1F] mt-[-4px]">
         {getLevelDescription()}
       </div>
     </div>

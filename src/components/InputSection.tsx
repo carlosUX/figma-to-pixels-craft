@@ -11,7 +11,7 @@ export const InputSection: React.FC = () => {
   };
   
   return (
-    <div className="max-w-none flex flex-col w-full bg-white mx-auto max-md:max-w-[991px] max-sm:max-w-screen-sm">
+    <div className="flex flex-col items-start w-full max-w-[1054px] mb-[30px] max-md:max-w-full max-sm:max-w-full">
       <div className="font-semibold text-xl text-[#242424] mb-[17px]">
         What would you like to build?
       </div>
