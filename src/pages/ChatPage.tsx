@@ -33,13 +33,16 @@ const ProgressIndicator: React.FC = () => {
           <path d="M16 4L19.2411 12.7589L28 16L19.2411 19.2411L16 28L12.7589 19.2411L4 16L12.7589 12.7589L16 4Z" fill="#9370DB" />
         </svg>
       </div>
+      <Link to="/scope">
       <div className="flex-1">
         <p className="font-semibold text-base text-[#242424]">Generating instructions to build a chatbot for healthcare</p>
         <div className="w-full h-2 bg-gray-200 rounded-full mt-2 overflow-hidden">
           <div className="w-1/3 h-full bg-gradient-to-r from-[#9370DB] to-[#7B68EE]"></div>
         </div>
       </div>
-    </div>;
+      </div>
+    </div>
+  );
 };
 const ChatPage: React.FC = () => {
   const navigate = useNavigate();
