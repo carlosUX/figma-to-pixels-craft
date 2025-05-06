@@ -1,13 +1,14 @@
 
 import React from "react";
 import { Progress } from "@/components/ui/progress";
-
+import { Link } from "react-router-dom";
 interface ProgressIndicatorProps {
   value?: number;
 }
 
 export const ProgressIndicator: React.FC<ProgressIndicatorProps> = ({ value = 75 }) => {
   return (
+    <Link to="/scope">
     <div className="w-full max-w-[900px] flex items-center border border-[#9370DB] rounded-lg p-6 mb-6">
       <div className="w-8 h-8 mr-4">
         <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -21,5 +22,6 @@ export const ProgressIndicator: React.FC<ProgressIndicatorProps> = ({ value = 75
         </div>
       </div>
     </div>
+    </Link>
   );
 };
