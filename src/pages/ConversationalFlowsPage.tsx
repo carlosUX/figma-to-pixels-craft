@@ -22,6 +22,25 @@ const ConversationalFlowsPage: React.FC = () => {
     <div className="max-w-none flex flex-col w-full bg-white min-h-screen">
       <Header />
       
+      {/* Moved "What would you like to build?" section here */}
+      <div className="w-full bg-[#F2BFA4] px-6 md:px-12 lg:px-36 py-4">
+        <div className="flex flex-col w-full max-w-[1054px] mx-auto">
+          <h3 className="font-semibold text-lg text-gray-700 mb-4">What would you like to build?</h3>
+          
+          <InputWithButton placeholder="Message Ivatech" />
+          
+          <div className="flex items-center mt-2">
+            <span className="text-sm text-gray-700 mr-2">Complexity</span>
+            <span className="text-sm font-semibold text-gray-700">Moderate</span>
+            <svg className="ml-2" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5.83333 5H14.1667C14.6269 5 15 5.37308 15 5.83333V14.1667C15 14.6269 14.6269 15 14.1667 15H5.83333C5.37308 15 5 14.6269 5 14.1667V5.83333C5 5.37308 5.37308 5 5.83333 5Z" stroke="#335CCC" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+              <path d="M5 5L15 15" stroke="#335CCC" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+              <path d="M15 5L5 15" stroke="#335CCC" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+      
       <main className="flex flex-col items-center bg-[#F2F2F2] px-6 md:px-12 lg:px-36 py-6">
         <div className="flex flex-col w-full max-w-[1054px]">
           {/* User prompt display */}
@@ -106,24 +125,7 @@ const ConversationalFlowsPage: React.FC = () => {
         </div>
       </main>
       
-      {/* Footer section */}
-      <div className="w-full bg-[#F2BFA4] px-6 md:px-12 lg:px-36 py-8">
-        <div className="flex flex-col w-full max-w-[1054px] mx-auto">
-          <h3 className="font-semibold text-lg text-gray-700 mb-4">What would you like to build?</h3>
-          
-          <InputWithButton placeholder="Message Ivatech" />
-          
-          <div className="flex items-center mt-2">
-            <span className="text-sm text-gray-700 mr-2">Complexity</span>
-            <span className="text-sm font-semibold text-gray-700">Moderate</span>
-            <svg className="ml-2" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M5.83333 5H14.1667C14.6269 5 15 5.37308 15 5.83333V14.1667C15 14.6269 14.6269 15 14.1667 15H5.83333C5.37308 15 5 14.6269 5 14.1667V5.83333C5 5.37308 5.37308 5 5.83333 5Z" stroke="#335CCC" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-              <path d="M5 5L15 15" stroke="#335CCC" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-              <path d="M15 5L5 15" stroke="#335CCC" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-            </svg>
-          </div>
-        </div>
-      </div>
+      {/* Footer section removed from here */}
     </div>
   );
 };
