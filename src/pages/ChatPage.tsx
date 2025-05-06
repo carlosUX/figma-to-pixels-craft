@@ -50,7 +50,7 @@ const ChatPage: React.FC = () => {
   const navigate = useNavigate();
   
   const handleSendMessage = () => {
-    navigate('/scope');
+    navigate('/scope-definition');
   };
   
   return (
