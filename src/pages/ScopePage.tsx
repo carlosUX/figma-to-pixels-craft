@@ -23,7 +23,7 @@ const ScopePage: React.FC = () => {
 
   const handleNext = () => {
     // Navigate to the next page or process the form
-    console.log("Next button clicked");
+    navigate('/regulatory-compliance');
   };
 
   return (
