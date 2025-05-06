@@ -3,7 +3,7 @@ import { Tag } from "../ui/Tag";
 
 export const PreferencesCard: React.FC = () => {
   return (
-    <div className="flex flex-col w-[462px] shadow-[0px_2px_4px_rgba(0,0,0,0.14),0px_0px_2px_rgba(0,0,0,0.12)] border bg-white rounded-xl border-solid border-[#E0E0E0] max-sm:w-full max-sm:max-w-[400px]">
+    <div className="flex flex-col w-[350px] shadow-[0px_2px_4px_rgba(0,0,0,0.14),0px_0px_2px_rgba(0,0,0,0.12)] border bg-white rounded-xl border-solid border-[#E0E0E0] max-sm:w-full max-sm:max-w-[400px]">
       <div className="flex items-center px-2.5 py-[11px] border-b-[#E0E0E0] border-b border-solid">
         <div
           dangerouslySetInnerHTML={{
