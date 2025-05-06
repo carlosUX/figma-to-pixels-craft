@@ -6,6 +6,8 @@ import { Header } from "@/components/Header";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Input } from "@/components/ui/input";
 import { Link } from "react-router-dom";
+import { PhaseNavigation } from "@/components/navigation/PhaseNavigation";
+
 
 const ScopePage: React.FC = () => {
   const navigate = useNavigate();
@@ -33,35 +35,9 @@ const ScopePage: React.FC = () => {
           <div className="text-center my-6 text-gray-700 text-lg max-w-3xl">
             I want to build a chatbot for healthcare professionals to track progress of patients in clinical trials. I am more familiar with AWS.
           </div>
-          
-          {/* Recommended phases */}
-          <div className="w-full max-w-[1054px] mb-8">
-            <div className="mb-2 text-gray-700 font-semibold">Recommended phases:</div>
-            <div className="flex flex-wrap gap-4 w-full">
-              <div className="border border-[#E8D1C5] bg-white rounded-lg p-4 min-w-[200px] text-center shadow-sm">
-                <span className="text-[#335CCC] font-semibold">Define the scope</span>
-              </div>
-              <Link to="/ScopeDefinitionPage">
-              <div className="border border-gray-200 bg-white rounded-lg p-4 min-w-[200px] text-center">
-                <span className="text-gray-700">Regulatory Compliance</span>
-              </div>
-              </Link>
-              <Link to="/ConversationalFlowsPage">
-              <div className="border border-gray-200 bg-white rounded-lg p-4 min-w-[200px] text-center">
-                <span className="text-gray-700">Design Conversational Flows</span>
-              </div>
-              </Link>
-              <div className="border border-gray-200 bg-white rounded-lg p-4 min-w-[200px] text-center">
-                <span className="text-gray-700">Choose Technology Stack</span>
-              </div>
-              <div className="flex items-center justify-center">
-                <div className="h-8 w-8 flex items-center justify-center rounded-full bg-white border border-gray-200">
-                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M4.5 9L7.5 6L4.5 3" stroke="#335CCC" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                </div>
-              </div>
-            </div>
+           {/* Phase Navigation */}
+           <div className="w-full max-w-[1054px] mb-8">
+            <PhaseNavigation />
           </div>
           
           {/* Main content */}
