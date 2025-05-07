@@ -11,11 +11,10 @@ export const Header: React.FC = () => {
           <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/5c7c32e3edfd872015a6f7028ee286776486d63c?placeholderIfAbsent=true" className="w-[45px] h-[53px] max-sm:w-[35px] max-sm:h-[41px]" alt="Innovatech Solutions Logo" />
         </Link>
         */}
-        <Link to="/">
+        
         <span className="font-bold text-2xl text-white ml-[9px] max-sm:text-lg">
-          Innovatech Solutions
+        <Link to="/">Innovatech Solutions</Link>
         </span>
-        </Link>
       </div>
     </header>
   );
