@@ -19,15 +19,15 @@ const DeployChatbotPage: React.FC = () => {
       <Header />
       
       {/* "What would you like to build?" section */}
-      <div className="w-full px-6 md:px-12 lg:px-36 py-4 bg-zinc-400">
+      <div className="w-full px-4 sm:px-6 md:px-12 lg:px-36 py-3 sm:py-4 bg-zinc-400">
         <div className="flex flex-col w-full max-w-[1054px] mx-auto">
-          <h3 className="font-semibold text-lg text-gray-700 mb-4">What would you like to build?</h3>
+          <h3 className="font-semibold text-md sm:text-lg text-gray-700 mb-3 sm:mb-4">What would you like to build?</h3>
           
           <InputWithButton />
           
           <div className="flex items-center mt-2">
-            <span className="text-sm text-gray-700 mr-2">Complexity</span>
-            <span className="text-sm font-semibold text-gray-700">Moderate</span>
+            <span className="text-xs sm:text-sm text-gray-700 mr-2">Complexity</span>
+            <span className="text-xs sm:text-sm font-semibold text-gray-700">Moderate</span>
             <svg className="ml-2" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M5.83333 5H14.1667C14.6269 5 15 5.37308 15 5.83333V14.1667C15 14.6269 14.6269 15 14.1667 15H5.83333C5.37308 15 5 14.6269 5 14.1667V5.83333C5 5.37308 5.37308 5 5.83333 5Z" stroke="#335CCC" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
               <path d="M5 5L15 15" stroke="#335CCC" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
@@ -37,33 +37,33 @@ const DeployChatbotPage: React.FC = () => {
         </div>
       </div>
       
-      <main className="flex flex-col items-center px-6 md:px-12 lg:px-36 py-6 bg-zinc-200">
+      <main className="flex flex-col items-center px-4 sm:px-6 md:px-12 lg:px-36 py-4 sm:py-6 bg-zinc-200">
         <div className="flex flex-col w-full max-w-[1054px]">
           {/* User prompt display */}
-          <div className="text-center my-6 italic text-gray-700">
+          <div className="text-center my-4 sm:my-6 italic text-gray-700 text-sm sm:text-base">
             I want to build a chatbot for healthcare professionals to track progress of patients in clinical trials. I am more familiar with AWS.
           </div>
           
           {/* Phase Navigation */}
-          <div className="w-full max-w-[1054px] mb-8">
+          <div className="w-full max-w-[1054px] mb-6 sm:mb-8">
             <PhaseNavigation />
           </div>
           
           {/* Main content */}
-          <div className="w-full max-w-[1054px] mb-12">
-            <div className="space-y-6">
-              <p className="text-gray-800">
+          <div className="w-full max-w-[1054px] mb-8 sm:mb-12">
+            <div className="space-y-4 sm:space-y-6">
+              <p className="text-gray-800 text-sm sm:text-base">
                 Deploy the chatbot on a platform accessible to healthcare professionals. This could be a web application, a mobile app, or an integration with existing healthcare systems.
               </p>
               
-              <p className="text-gray-800">
+              <p className="text-gray-800 text-sm sm:text-base">
                 Ensure that the deployment process includes thorough testing to verify that the chatbot functions correctly in the live environment. Provide clear instructions and support for users to help them get started with the chatbot.
               </p>
             </div>
 
-            <div className="my-12 bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
-              <h3 className="font-semibold text-lg text-blue-800 mb-4">Deployment Checklist</h3>
-              <ul className="list-disc pl-6 space-y-3 text-gray-700">
+            <div className="my-6 sm:my-12 bg-white border border-gray-200 rounded-lg p-4 sm:p-6 shadow-sm">
+              <h3 className="font-semibold text-md sm:text-lg text-blue-800 mb-2 sm:mb-4">Deployment Checklist</h3>
+              <ul className="list-disc pl-4 sm:pl-6 space-y-2 sm:space-y-3 text-gray-700 text-sm sm:text-base">
                 <li>Configure AWS Elastic Beanstalk for web application hosting</li>
                 <li>Set up Amazon API Gateway for RESTful API endpoints</li>
                 <li>Implement AWS CloudFront for content delivery</li>
@@ -74,9 +74,9 @@ const DeployChatbotPage: React.FC = () => {
               </ul>
             </div>
 
-            <div className="my-12">
-              <div className="bg-amber-50 border-l-4 border-amber-500 p-4 mb-8">
-                <p className="text-amber-800">
+            <div className="my-6 sm:my-12">
+              <div className="bg-amber-50 border-l-4 border-amber-500 p-3 sm:p-4 mb-6 sm:mb-8">
+                <p className="text-amber-800 text-xs sm:text-sm md:text-base">
                   <strong>Important:</strong> Before deployment, ensure all HIPAA compliance requirements are met and that the system has undergone security testing to protect sensitive patient data.
                 </p>
               </div>
@@ -84,12 +84,12 @@ const DeployChatbotPage: React.FC = () => {
           </div>
           
           {/* Navigation buttons */}
-          <div className="flex gap-4 mb-12">
-            <Button onClick={handleBack} variant="secondary" className="bg-blue-600 hover:bg-blue-700 text-white px-6">
+          <div className="flex gap-3 sm:gap-4 mb-8 sm:mb-12">
+            <Button onClick={handleBack} variant="secondary" className="bg-blue-600 hover:bg-blue-700 text-white px-3 sm:px-6 py-1 sm:py-2 text-sm sm:text-base">
               <span className="mr-1">←</span> Back
             </Button>
             
-            <Button onClick={handleNextOrDeploy} variant="secondary" className="bg-amber-500 hover:bg-amber-600 text-white px-6">
+            <Button onClick={handleNextOrDeploy} variant="secondary" className="bg-amber-500 hover:bg-amber-600 text-white px-3 sm:px-6 py-1 sm:py-2 text-sm sm:text-base">
               Deploy
             </Button>
           </div>

@@ -101,6 +101,15 @@
       transform: translateY(0);
     }
   }
+  
+  /* Responsive utilities */
+  .responsive-padding {
+    @apply px-6 md:px-12 lg:px-36;
+  }
+  
+  .responsive-container {
+    @apply w-full max-w-[1054px] mx-auto;
+  }
 }
 
 /* Adding custom color scheme classes */
